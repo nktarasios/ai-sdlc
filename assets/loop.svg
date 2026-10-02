@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 250" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#768390"/>
+    </marker>
+  </defs>
+
+  <!-- stage boxes -->
+  <g stroke="#768390" stroke-width="1.5" fill="none">
+    <rect x="14"  y="60" width="136" height="56" rx="10"/>
+    <rect x="172" y="60" width="136" height="56" rx="10"/>
+    <rect x="330" y="60" width="136" height="56" rx="10"/>
+    <rect x="488" y="60" width="136" height="56" rx="10"/>
+    <rect x="646" y="60" width="136" height="56" rx="10"/>
+    <rect x="804" y="60" width="136" height="56" rx="10"/>
+  </g>
+
+  <!-- stage names -->
+  <g fill="#539bf5" font-size="16" font-weight="bold" text-anchor="middle">
+    <text x="82"  y="84">Research</text>
+    <text x="240" y="84">Plan</text>
+    <text x="398" y="84">Test</text>
+    <text x="556" y="84">Implement</text>
+    <text x="714" y="84">Validate</text>
+    <text x="872" y="84">Review</text>
+  </g>
+
+  <!-- failure each stage blocks -->
+  <g fill="#768390" font-size="10.5" text-anchor="middle">
+    <text x="82"  y="104">vs. imagined code</text>
+    <text x="240" y="104">vs. fuzzy scope</text>
+    <text x="398" y="104">red first</text>
+    <text x="556" y="104">vs. scope growth</text>
+    <text x="714" y="104">vs. silent drift</text>
+    <text x="872" y="104">final PR gate</text>
+  </g>
+
+  <!-- forward arrows -->
+  <g stroke="#768390" stroke-width="1.5" marker-end="url(#arr)">
+    <line x1="150" y1="88" x2="168" y2="88"/>
+    <line x1="308" y1="88" x2="326" y2="88"/>
+    <line x1="466" y1="88" x2="484" y2="88"/>
+    <line x1="624" y1="88" x2="642" y2="88"/>
+    <line x1="782" y1="88" x2="800" y2="88"/>
+  </g>
+
+  <!-- adversarial reviewer per stage -->
+  <g fill="#768390" font-size="10.5" text-anchor="middle">
+    <text x="82"  y="146">⛉ reviewer</text>
+    <text x="240" y="146">⛉ reviewer</text>
+    <text x="398" y="146">⛉ reviewer</text>
+    <text x="556" y="146">⛉ reviewer</text>
+    <text x="714" y="146">⛉ reviewer</text>
+    <text x="872" y="146">⛉ reviewer</text>
+  </g>
+  <g stroke="#768390" stroke-width="1" stroke-dasharray="3 3">
+    <line x1="82"  y1="120" x2="82"  y2="133"/>
+    <line x1="240" y1="120" x2="240" y2="133"/>
+    <line x1="398" y1="120" x2="398" y2="133"/>
+    <line x1="556" y1="120" x2="556" y2="133"/>
+    <line x1="714" y1="120" x2="714" y2="133"/>
+    <line x1="872" y1="120" x2="872" y2="133"/>
+  </g>
+
+  <!-- retrospective loop back -->
+  <path d="M 872 116 L 872 196 Q 872 210 858 210 L 96 210 Q 82 210 82 196 L 82 152" fill="none" stroke="#768390" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr)" transform="translate(0,-30)"/>
+  <rect x="404" y="164" width="150" height="26" rx="13" fill="none" stroke="#768390" stroke-width="1"/>
+  <text x="479" y="181" fill="#539bf5" font-size="12" text-anchor="middle" font-weight="bold">retrospective</text>
+  <text x="479" y="206" fill="#768390" font-size="10.5" text-anchor="middle">lessons feed the next run's research</text>
+
+  <!-- top annotation -->
+  <text x="479" y="34" fill="#768390" font-size="11.5" text-anchor="middle">every stage: independent adversarial reviewer · finishes by printing the next command</text>
+</svg>
